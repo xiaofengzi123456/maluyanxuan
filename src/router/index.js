@@ -6,27 +6,42 @@ const router = createRouter({
     {
       path:'/login',
       name:"login",
-      component:()=>import("@/views/login/index.vue")
+      component:()=>import("@/views/login/index.vue"),
+      meta:{
+        isShowTab:false
+      }
     },
     {
       path:'/',
       name:"home",
-      component:()=>import("@/views/home/index.vue")
+      component:()=>import("@/views/home/index.vue"),
+      meta:{
+        isShowTab:true
+      }
     },
     {
       path:'/category',
       name:"category",
-      component:()=>import("@/views/category/index.vue")
+      component:()=>import("@/views/category/index.vue"),
+      meta:{
+        isShowTab:true
+      }
     },
     {
       path:'/cart',
       name:"cart",
-      component:()=>import("@/views/cart/index.vue")
+      component:()=>import("@/views/cart/index.vue"),
+      meta:{
+        isShowTab:true
+      }
     },
     {
       path:'/my',
       name:"my",
-      component:()=>import("@/views/my/index.vue")
+      component:()=>import("@/views/my/index.vue"),
+      meta:{
+        isShowTab:true
+      }
     },
     {
       path:'/:pathMatch(.*)',
